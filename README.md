@@ -1,5 +1,7 @@
 # Nest + Prisma + GraphQL Boilerplate 
 
+![CI](https://github.com/wataru-maeda/nest-graphql-prisma-boilerplate/actions/workflows/main.yml/badge.svg)
+
 This is a backend starter template based on [Nest](https://github.com/nestjs/nest) framework with completed setup of [GraphQL](https://docs.nestjs.com/graphql/quick-start) and [Prisma](https://docs.nestjs.com/recipes/prisma). The purpose of using the project is to minimize the redundant effort to setup a backend project from scratch. All of the basic setup done for you.
 
 ## Prerequites
