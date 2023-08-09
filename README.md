@@ -30,7 +30,7 @@ A health check represents a summary of health indicators. A health indicator exe
 
 **Development environment**
 
-Environment variables, listing, code formatting, and testing are all configured for you as well as CI with Github action. You can see the [config module](https://github.com/wataru-maeda/nest-graphql-prisma-boilerplate/tree/main/src/config) to see how the environment variables are configured. Such tests often span a variety of types, including unit tests, end-to-end (e2e) tests, integration tests, and so on. Nest strives to promote the development best practices, including effective testing. Editor configuration is also done for you if you are using VSCode you'll be able to format code when you save. 
+Environment variables, listing, code formatting, and testing are all configured for you as well as CI with Github action. You can see the [config module](https://github.com/wataru-maeda/nest-graphql-prisma-boilerplate/tree/main/src/config) to see how the environment variables are configured. Also [Husky](https://typicode.github.io/husky/) configuration is done for you to avoid unexpected errors happens while developing. In case linting and testing does not triggered on commit, please run ```npx husky install``` to enable git hook. Such tests often span a variety of types, including unit tests, end-to-end (e2e) tests, integration tests, and so on. Nest strives to promote the development best practices, including effective testing. Editor configuration is also done for you if you are using VSCode you'll be able to format code when you save. 
 
 ## Scripts
 
