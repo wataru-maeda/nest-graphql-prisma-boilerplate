@@ -1,4 +1,4 @@
-# Nest + Prisma + GraphQL Boilerplate
+# Nest + Prisma + GraphQL Boilerplate 
 
 ## About
 
