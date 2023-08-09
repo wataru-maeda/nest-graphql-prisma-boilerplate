@@ -20,25 +20,31 @@ This is a backend starter template based on [Nest](https://github.com/nestjs/nes
 
 **Nest with GraphQL and Prisma**
 
-Not only nest is a framework for building robust backend applications but also configuring GraphQL and Prisma with the typescript OOP concepts. In the boilerplate, GraphQL is configured with [code first](https://docs.nestjs.com/graphql/quick-start#code-first) approach. Prisma is ORM for databases that can use as an alternative to writing plain SQL. The boilerplate configures Prisma to use SQLite for now but you can change to other databases i.e. PostgreSQL, MySQL, MongoDB.
+Not only nest is a framework for building robust backend applications but also configuring GraphQL and Prisma with the typescript OOP concepts. In the boilerplate, GraphQL is configured with [code first](https://docs.nestjs.com/graphql/quick-start#code-first) approach. You can see the GraphQL configuration [here](https://github.com/wataru-maeda/nest-graphql-prisma-boilerplate/tree/main/src/gql). Prisma is ORM for databases that can use as an alternative to writing plain SQL. The boilerplate configures Prisma to use SQLite for now but you can change to other databases i.e. PostgreSQL, MySQL, MongoDB.
 
 **Security and Monitoring**
 
-A health check represents a summary of health indicators. A health indicator executes a check of service, whether it is healthy or unhealthy. You'll be able to check the backend health status at http://localhost:8080/health. A common technique to protect applications from brute-force attacks is rate-limiting.
-
+A health check represents a summary of health indicators. A health indicator executes a check of service, whether it is healthy or unhealthy. You'll be able to check the health status at http://localhost:8080/health once you spin up the backend template. The healthcheck module is defined [here](https://github.com/wataru-maeda/nest-graphql-prisma-boilerplate/tree/main/src/health). A common technique to protect applications from brute-force attacks is rate-limiting. [throttle module](https://github.com/wataru-maeda/nest-graphql-prisma-boilerplate/blob/main/src/throttle/throttle.module.ts) is a module to configure rate limiting. 
 
 **Development environment**
 
-Listing, code formatting and testing are all configured as well as CI with Github action. Such tests often span a variety of types, including unit tests, end-to-end (e2e) tests, integration tests, and so on. Nest strives to promote development best practices, including effective testing. Editor configuration also done for you if you are using VSCode you'll be able to format code when you save. 
+Environment variables, listing, code formatting, and testing are all configured for you as well as CI with Github action. You can see the [config module](https://github.com/wataru-maeda/nest-graphql-prisma-boilerplate/tree/main/src/config) to see how the environment variables are configured. Such tests often span a variety of types, including unit tests, end-to-end (e2e) tests, integration tests, and so on. Nest strives to promote the development best practices, including effective testing. Editor configuration is also done for you if you are using VSCode you'll be able to format code when you save. 
 
+## Scripts
 
-## Installation
+#### Installation
 
 ```bash
 $ npm install
 ```
 
-## Running the app
+#### Database migration and seeding
+
+```bash
+$ npm run migrate
+```
+
+#### Running the app
 
 ```bash
 # dev
@@ -51,7 +57,17 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## Test
+#### Listing, formatting
+
+```bash
+# eslint
+$ npm run lint
+
+# prettier
+$ npm run format
+```
+
+#### Test
 
 ```bash
 # unit tests
@@ -64,11 +80,6 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Installed Packages
+## Licence
 
-- Nodejs
-- Nestjs
-- GraphQL
-- ESLint
-- Prettier
-- Jest
+This project is available under the MIT license. See the [LICENSE](https://github.com/wataru-maeda/nest-graphql-prisma-boilerplate/blob/main/LICENSE) file for more info.
