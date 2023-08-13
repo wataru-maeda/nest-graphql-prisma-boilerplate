@@ -25,11 +25,14 @@ COPY . ./
 # Compile down to ES5 with Babel
 RUN npm run build
 
+# Generate SQLite database & seed data
+RUN npm run migrate
+
 # Remove unused src directory
 RUN rm -rf src/
 
 # Run the web service on container startup.
-CMD [ "node", "dist/main.js" ]
+CMD [ "node", "dist/src/main" ]
 
 EXPOSE 8080
 

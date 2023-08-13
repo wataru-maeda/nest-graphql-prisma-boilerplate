@@ -45,7 +45,6 @@ export class UserResolver {
 
   @ResolveField(() => [PostOutput])
   async posts(@Parent() { id }: { id: number }) {
-    console.log('[##]id ', id);
     return this.postService.getPosts(id);
   }
 }
