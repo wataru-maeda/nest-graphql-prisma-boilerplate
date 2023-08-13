@@ -37,7 +37,7 @@ steps:
     env:
       - 'GOOGLE_PROJECT_ID=${_GOOGLE_PROJECT_ID}'
       - 'CLOUD_RUN_SERVICE=${_CLOUD_RUN_SERVICE}'
-      - 'REGION=${_REGION}'
+  - 'REGION=${_REGION}'
 options:
   substitution_option: 'ALLOW_LOOSE'
 images:

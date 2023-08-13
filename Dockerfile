@@ -22,6 +22,7 @@ RUN npm ci
 # Copy local code to the container image.
 COPY . ./
 
+# Get ENV variable passed from docker build command
 ARG DATABASE_URL=""
 
 # Generate SQLite database & seed data
