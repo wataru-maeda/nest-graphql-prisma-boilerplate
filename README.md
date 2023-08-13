@@ -1,4 +1,4 @@
-# Nest + Prisma + GraphQL Boilerplate
+# Nest + Prisma + GraphQL Boilerplate 
 
 ![CI](https://github.com/wataru-maeda/nest-graphql-prisma-boilerplate/actions/workflows/main.yml/badge.svg)
 
