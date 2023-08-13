@@ -23,7 +23,7 @@ RUN npm ci
 COPY . ./
 
 # Generate SQLite database & seed data
-RUN DATABASE_URL="file:./dev.db" npm run migrate
+RUN npm run migrate
 
 # Compile down to ES5 with Babel
 RUN npm run build
