@@ -18,26 +18,26 @@ steps:
     args: ['push', 'gcr.io/${_GOOGLE_PROJECT_ID}/${_CLOUD_RUN_SERVICE}']
     timeout: 500s
   # Deploy container image to Cloud Run
-  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-    entrypoint: gcloud
-    args:
-      [
-        'run',
-        'deploy',
-        '${_CLOUD_RUN_SERVICE}',
-        '--image',
-        'gcr.io/${_GOOGLE_PROJECT_ID}/${_CLOUD_RUN_SERVICE}',
-        '--platform',
-        'managed',
-        '--region',
-        '${_REGION}',
-        '--allow-unauthenticated',
-      ]
-    timeout: 500s
-    env:
-      - 'GOOGLE_PROJECT_ID=${_GOOGLE_PROJECT_ID}'
-      - 'CLOUD_RUN_SERVICE=${_CLOUD_RUN_SERVICE}'
-      - 'REGION=${_REGION}'
+  # - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  #   entrypoint: gcloud
+  #   args:
+  #     [
+  #       'run',
+  #       'deploy',
+  #       '${_CLOUD_RUN_SERVICE}',
+  #       '--image',
+  #       'gcr.io/${_GOOGLE_PROJECT_ID}/${_CLOUD_RUN_SERVICE}',
+  #       '--platform',
+  #       'managed',
+  #       '--region',
+  #       '${_REGION}',
+  #       '--allow-unauthenticated',
+  #     ]
+  #   timeout: 500s
+  #   env:
+  #     - 'GOOGLE_PROJECT_ID=${_GOOGLE_PROJECT_ID}'
+  #     - 'CLOUD_RUN_SERVICE=${_CLOUD_RUN_SERVICE}'
+  #     - 'REGION=${_REGION}'
 options:
   substitution_option: 'ALLOW_LOOSE'
 images:

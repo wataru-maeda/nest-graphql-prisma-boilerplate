@@ -23,7 +23,7 @@ RUN npm ci
 COPY . ./
 
 # Get ENV variable passed from docker build command
-ARG DATABASE_URL=""
+ARG DATABASE_URL="file:./dev.db"
 
 # Generate SQLite database & seed data
 RUN DATABASE_URL=$DATABASE_URL npm run migrate
