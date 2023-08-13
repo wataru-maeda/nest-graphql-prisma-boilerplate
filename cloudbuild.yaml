@@ -2,7 +2,13 @@ steps:
   # Build the container image
   - name: 'gcr.io/cloud-builders/docker'
     args:
-      ['build', '-t', 'gcr.io/${_GOOGLE_PROJECT_ID}/${_CLOUD_RUN_SERVICE}', '.']
+      [
+        'build',
+        '-t',
+        'gcr.io/${_GOOGLE_PROJECT_ID}/${_CLOUD_RUN_SERVICE}',
+        '.',
+        '--set-env-vars DATABASE_URL=${_DATABASE_URL}',
+      ]
     env:
       - 'DATABASE_URL=${_DATABASE_URL}'
     secretEnv: ['DATABASE_URL']
