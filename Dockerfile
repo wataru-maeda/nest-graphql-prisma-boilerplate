@@ -22,11 +22,11 @@ RUN npm ci
 # Copy local code to the container image.
 COPY . ./
 
-# Compile down to ES5 with Babel
-RUN npm run build
-
 # Generate SQLite database & seed data
 RUN npm run migrate
+
+# Compile down to ES5 with Babel
+RUN npm run build
 
 # Remove unused src directory
 RUN rm -rf src/
