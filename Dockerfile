@@ -22,8 +22,10 @@ RUN npm ci
 # Copy local code to the container image.
 COPY . ./
 
+ARG DATABASE_URL=""
+
 # Generate SQLite database & seed data
-RUN DATABASE_URL="${DATABASE_URL}" npm run migrate
+RUN DATABASE_URL=$DATABASE_URL npm run migrate
 
 # Compile down to ES5 with Babel
 RUN npm run build
