@@ -4,10 +4,11 @@ steps:
     args:
       [
         'build',
+        '--build-arg',
+        'DATABASE_URL=${_DATABASE_URL}',
         '-t',
         'gcr.io/${_GOOGLE_PROJECT_ID}/${_CLOUD_RUN_SERVICE}',
         '.',
-        '--substitutions=DATABASE_URL=${_DATABASE_URL}',
       ]
     env:
       - 'DATABASE_URL=${_DATABASE_URL}'
