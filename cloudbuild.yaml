@@ -7,7 +7,7 @@ steps:
         '-t',
         'gcr.io/${_GOOGLE_PROJECT_ID}/${_CLOUD_RUN_SERVICE}',
         '.',
-        'build--substitutions=DATABASE_URL=${_DATABASE_URL}',
+        '--substitutions=DATABASE_URL=${_DATABASE_URL}',
       ]
     env:
       - 'DATABASE_URL=${_DATABASE_URL}'
