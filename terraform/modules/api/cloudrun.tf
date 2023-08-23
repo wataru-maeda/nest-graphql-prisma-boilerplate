@@ -1,18 +1,3 @@
-data "google_cloud_run_service" "cloud_run" {
-  name     = "${var.service_name}-${var.environment}-cloud-run"
-  project  = var.project_id
-  location = var.location
-}
-
-data "google_iam_policy" "auth" {
-  binding {
-    role = "roles/run.invoker"
-    members = [
-      "allUsers",
-    ]
-  }
-}
-
 resource "google_cloud_run_service" "cloud_run" {
   name     = "${var.service_name}-${var.environment}-cloud-run"
   project  = var.project_id
@@ -54,11 +39,12 @@ resource "google_cloud_run_service" "cloud_run" {
   }
 }
 
-resource "google_cloud_run_service_iam_policy" "auth" {
-  location    = google_cloud_run_service.cloud_run.location
-  project     = google_cloud_run_service.cloud_run.project
-  service     = google_cloud_run_service.cloud_run.name
-  policy_data = data.google_iam_policy.auth.policy_data
+resource "google_cloud_run_service_iam_member" "member" {
+  location = google_cloud_run_service.cloud_run.location
+  project  = google_cloud_run_service.cloud_run.project
+  service  = google_cloud_run_service.cloud_run.name
+  role     = "roles/run.invoker"
+  member   = "allUsers"
 }
 
 output "url" {

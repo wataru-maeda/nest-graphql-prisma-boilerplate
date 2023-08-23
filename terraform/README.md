@@ -18,9 +18,5 @@ gcloud services enable compute.googleapis.com run.googleapis.com storage.googlea
 1. Go to [main.tf](https://github.com/wataru-maeda/nest-graphql-prisma-boilerplate/blob/main/terraform/environment/dev/main) and update the line # CHANGE HERE
 2. Run `terraform init` and `terraform plan`
 3. You'll see the all of GCP resources about to create. Confirm if the changes are correct or not. Once you confirm everything is ok, run `terraform apply -auto-approve`
-
-## References
-
-- [Getting Started with the Google Provider](https://registry.terraform.io/providers/hashicorp/google/latest/docs/guides/getting_started)
-
-- [Get started another pre-requities](https://cloud.google.com/docs/terraform/resource-management/managing-infrastructure-as-code#prerequisites)
+4. In first attempt will fail since you need to connect to your github repository. Go to [Cloud Build Trigger](https://console.cloud.google.com/cloud-build/triggers) and connect to your repository.
+5. Run again `terraform apply`
