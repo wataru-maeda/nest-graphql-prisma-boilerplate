@@ -1,0 +1,23 @@
+steps:
+  # Build the container image
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      [
+        'build',
+        '--build-arg',
+        'DATABASE_URL=${_DATABASE_URL}',
+        '-t',
+        'gcr.io/${_GOOGLE_PROJECT_ID}/${_CLOUD_RUN_SERVICE}',
+        '.',
+      ]
+    env:
+      - 'DATABASE_URL=${_DATABASE_URL}'
+    timeout: 500s
+  # Push the container image to Container Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/${_GOOGLE_PROJECT_ID}/${_CLOUD_RUN_SERVICE}']
+    timeout: 500s
+options:
+  substitution_option: 'ALLOW_LOOSE'
+images:
+  - gcr.io/${_GOOGLE_PROJECT_ID}/${_CLOUD_RUN_SERVICE}
