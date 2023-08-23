@@ -4,6 +4,8 @@
 
 This is a backend starter template based on [Nest](https://github.com/nestjs/nest) framework with completed setup of [GraphQL](https://docs.nestjs.com/graphql/quick-start) and [Prisma](https://docs.nestjs.com/recipes/prisma). The purpose of using the project is to minimize the redundant effort to setup a backend project from scratch. All of the basic setup done for you.
 
+- [Demo API](https://api-dev-cloud-run-pp6bn55l7q-uc.a.run.app/graphql)
+
 ## Prerequites
 
 - [Node](https://nodejs.org/it/download/current): v16.x

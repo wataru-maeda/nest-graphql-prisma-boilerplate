@@ -21,11 +21,11 @@ terraform {
 # -----------------------------------------------------------------
 
 locals {
-  project_id   = "triple-circle-396807" # CHANGE HERE
-  service_name = "api"                  # CHANGE HERE
-  environment  = "dev"                  # CHANGE HERE
-  region       = "us-central1"          # CHANGE HERE
-  zone         = "us-central1-c"        # CHANGE HERE
+  project_id   = "api-demo-terraform" # CHANGE HERE
+  service_name = "api"                # CHANGE HERE
+  environment  = "dev"                # CHANGE HERE
+  region       = "us-central1"        # CHANGE HERE
+  zone         = "us-central1-c"      # CHANGE HERE
 }
 
 # -----------------------------------------------------------------
