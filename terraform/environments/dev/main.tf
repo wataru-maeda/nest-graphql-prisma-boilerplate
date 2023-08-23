@@ -4,7 +4,7 @@
 
 terraform {
   /* backend "gcs" {
-    bucket = "your-project-dev-tf-state"
+    bucket = "api-demo-terraform-dev-tf-state"
     prefix = "terraform/state"
   } */
 
@@ -74,5 +74,5 @@ module "api" {
 
   github_owner       = "wataru-maeda"                    # CHANGE HERE
   github_repo_name   = "nest-graphql-prisma-boilerplate" # CHANGE HERE
-  github_branch_name = "^terraform-gcp-deploy$"          # CHANGE HERE
+  github_branch_name = "^main$"                          # CHANGE HERE
 }
