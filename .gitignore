@@ -72,4 +72,3 @@ terraform.rc
 .env
 .envrc
 apikey.json
-.terraform.lock.hcl
