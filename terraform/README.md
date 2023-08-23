@@ -1,6 +1,6 @@
 # Deploy the template to GCP
 
-Here is the step by step guide to spin up the backend template up and running in GCP. We use terraform to manage infrastructure as code by using [Cloud Build](https://cloud.google.com/build) and [Cloud Run](https://cloud.google.com/run) for simplifying continuous deployment.
+Here is the step-by-step guide to spin up the backend template up and running in GCP. We use Terraform to manage infrastructure as code to setup [Cloud Build](https://cloud.google.com/build) and [Cloud Run](https://cloud.google.com/run) for simplifying continuous deployment.
 
 <img src="https://codelabs.developers.google.com/static/codelabs/cloud-run-deploy/img/db5f05c090d5ebcb_1920.png" width="100%" />
 
@@ -23,10 +23,10 @@ gcloud services enable compute.googleapis.com run.googleapis.com storage.googlea
 1. Go to [main.tf](https://github.com/wataru-maeda/nest-graphql-prisma-boilerplate/blob/main/terraform/environment/dev/main.tf) and update the line # CHANGE HERE
 2. Move to [dev](https://github.com/wataru-maeda/nest-graphql-prisma-boilerplate/blob/main/terraform/environment/dev) directory then run `terraform init` and `terraform plan`
 3. You'll see the all of GCP resources about to create. Once you confirm everything is ok, run `terraform apply -auto-approve`
-4. It failed with the first attempt since we you need to connect with your repository. Go to [Cloud Build Trigger](https://console.cloud.google.com/cloud-build/triggers) and connect with your repository from creating new trigger option. You actually do not need to create a new trigger but you only need to connect with your repository.
-5. Run again `terraform apply` and complete setup on cloud build for CI/CD pipeline.
-6. Git push your change to trigger deploy. You'll see new build process triggered in [Cloud Build History](https://console.cloud.google.com/cloud-build/builds)
-7. After build succeed, build images are available in Cloud Run. Please run `terraform apply` again. Terraform will complete cloud run resource. Once process complete, you'll find api url in [Cloud Run](https://console.cloud.google.com/run)
+4. It failed with the first attempt since we you need to connect with your repository. Go to [Cloud Build Trigger](https://console.cloud.google.com/cloud-build/triggers) and connect with your repository by creating a new trigger option. You actually do not need to create a new trigger but you only need to connect with your repository.
+5. Run again `terraform apply` and complete the setup on cloud build for CI/CD pipeline.
+6. Git push your change to trigger deployment. You'll see a new build process triggered in [Cloud Build History](https://console.cloud.google.com/cloud-build/builds)
+7. After the build succeeds, build images are available in Cloud Run. Please run `terraform apply` again. Terraform will complete cloud run resources. Once the process is complete, you'll find API URL in [Cloud Run](https://console.cloud.google.com/run)
 
 ## Reference
 
