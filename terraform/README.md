@@ -8,7 +8,7 @@ Here is the step-by-step guide to spin up the backend template up and running in
 ## Prerequities
 
 1. Please install [Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/gcp-get-started), [gcloud CLI](https://cloud.google.com/sdk/docs/install)  and [direnv](https://github.com/direnv/direnv/blob/master/docs/installation.md)
-2. Create a new project in [GCP Console](https://console.cloud.google.com/)
+2. Create a new project in [GCP Console](https://console.cloud.google.com/). Make sure that [billing is enabled](https://cloud.google.com/billing/docs/how-to/verify-billing-enabled#console) for your Google Cloud project.
 3. Run GCP command `gcloud config set project {YOUR-PROJECT-ID}` to set your project
 4. Run the following command to enable API services 
 ```
