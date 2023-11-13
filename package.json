@@ -6,6 +6,7 @@
   "private": false,
   "license": "UNLICENSED",
   "scripts": {
+    "ci": "watchman watch-del-all && rm -rf node_modules && npm install",
     "prebuild": "rimraf dist",
     "build": "nest build",
     "start": "nest start",
