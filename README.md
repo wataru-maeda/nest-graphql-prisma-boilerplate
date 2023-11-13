@@ -8,9 +8,9 @@ This is a backend starter template based on [Nest](https://github.com/nestjs/nes
 
 ## Prerequites
 
-- [Node](https://nodejs.org/it/download/current): v16.x
+- [Node](https://nodejs.org/it/download/current): v20.x
 - [Nest CLI](https://docs.nestjs.com/cli/overview): 10.1.11
-- [Prisma CLI](https://www.prisma.io/docs/reference/api-reference/command-reference#npm-1): 5.1.1
+- [Prisma CLI](https://www.prisma.io/docs/reference/api-reference/command-reference#npm-1): 5.5.2
   
 ## Quickstart
 
